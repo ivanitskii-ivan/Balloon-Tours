@@ -28,13 +28,13 @@
             width: 75rem
             height: 50rem
         @include screen(phone)
-            width: 65rem
-            min-width: 55rem
+            width: 100%         // 1. Занимаем всю ширину экрана телефона
+            min-width: 0        // 2. ОБЯЗАТЕЛЬНО сбрасываем десктопный min-width
             padding-left: 0 
-            height: 44rem
+            height: 38rem       // 3. Высота для абсолютного коллажа (подгони на глаз)
         img
             width: 100%
             @include screen(tab-port)
                 width: calc( 75% - 7rem )
             @include screen(phone)
-                width: calc( 100% - 24rem )
+                width: 55%
