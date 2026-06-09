@@ -578,6 +578,11 @@ a {
     height: 100rem;
   }
 }
+@media (max-width: 600px) {
+  .card-rotate {
+    height: 75vh;
+  }
+}
 .card-rotate__show {
   border-radius: 0.5rem;
   height: 20rem;
@@ -610,6 +615,7 @@ a {
   font-size: 2.5rem;
   z-index: 1000;
   text-align: end;
+  backface-visibility: hidden;
 }
 @media (max-width: 900px) {
   .card-rotate__name-tour {
@@ -629,6 +635,16 @@ a {
 }
 .card-rotate:hover .card-rotate__inner {
   transform: rotateY(-180deg);
+}
+@media (max-width: 600px) {
+  .card-rotate:hover .card-rotate__inner {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .card-rotate:active .card-rotate__inner {
+    transform: rotateY(-180deg);
+  }
 }
 .card-rotate__front, .card-rotate__back {
   display: flex;
@@ -849,6 +865,7 @@ a {
     justify-content: center;
     align-items: center;
     min-height: auto;
+    padding-block: 4rem;
   }
 }
 .section-footer__container {
@@ -860,6 +877,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .section-footer__container {
+    padding: 0;
   }
 }
 .section-footer__contacts {
