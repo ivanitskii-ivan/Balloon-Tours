@@ -57,11 +57,23 @@
   left: 24rem;
   z-index: 1000;
 }
+@media (max-width: 600px) {
+  .im-2 {
+    top: 5%;
+    left: 45%;
+  }
+}
 
 .im-3 {
   top: 12rem;
   left: 10rem;
   z-index: 1002;
+}
+@media (max-width: 600px) {
+  .im-3 {
+    top: 30%;
+    left: 15%;
+  }
 }
 
 .video-group::after {
@@ -639,6 +651,7 @@ a {
 .card-rotate__back {
   background: linear-gradient(90deg, #BA8554, #584f42);
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 @media (max-width: 600px) {
   .card-rotate__back {
@@ -831,6 +844,13 @@ a {
   background: linear-gradient(0deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
   width: 100%;
   min-height: 55rem;
+}
+@media (max-width: 600px) {
+  .section-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section-footer__container {
   padding: 12rem 2rem 0 12rem;

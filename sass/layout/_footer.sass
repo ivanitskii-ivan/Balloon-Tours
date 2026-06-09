@@ -2,6 +2,10 @@
     background: linear-gradient(0deg, rgba($color-brown-light,0.7 ) 0.03%, rgba(1,1,1, 0.7 )99.94%)
     width: 100%
     min-height: 55rem 
+    @include screen(phone)
+        display: flex
+        justify-content: center
+        align-items: center
     &__container
         padding: 12rem 2rem 0 12rem
         @include screen(tab-port)

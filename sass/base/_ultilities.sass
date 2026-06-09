@@ -38,11 +38,17 @@
     top: 1rem
     left: 24rem
     z-index: 1000
+    @include screen(phone)
+        top: 5%
+        left: 45%
+
 .im-3
     top: 12rem
     left: 10rem
     z-index: 1002
-
+    @include screen(phone)
+        top: 30%
+        left: 15%
 .video-group
     &::after
         content: ''
