@@ -30,6 +30,11 @@
     flex-wrap: wrap;
   }
 }
+@media (max-width: 600px) {
+  .row {
+    gap: 5rem;
+  }
+}
 
 .text-align-center {
   text-align: center;
@@ -144,6 +149,7 @@ a {
 .container_gradient {
   padding: 10rem;
   background: linear-gradient(90deg, #A14F03, #BA8554);
+  border-radius: 5px;
 }
 @media (max-width: 600px) {
   .container_gradient {
@@ -478,6 +484,7 @@ a {
 }
 @media (max-width: 600px) {
   .section-about__images {
+    width: 65rem;
     min-width: 55rem;
     padding-left: 0;
     height: 44rem;
@@ -559,11 +566,6 @@ a {
     height: 100rem;
   }
 }
-@media (max-width: 600px) {
-  .card-rotate {
-    height: auto;
-  }
-}
 .card-rotate__show {
   border-radius: 0.5rem;
   height: 20rem;
@@ -584,8 +586,9 @@ a {
 }
 @media (max-width: 600px) {
   .card-rotate__inner {
-    position: relative;
-    height: auto;
+    position: absolute;
+    transition: 0.3s all;
+    transform-style: preserve-3d;
   }
 }
 .card-rotate__name-tour {
@@ -615,11 +618,6 @@ a {
 .card-rotate:hover .card-rotate__inner {
   transform: rotateY(-180deg);
 }
-@media (max-width: 600px) {
-  .card-rotate:hover .card-rotate__inner {
-    transform: none;
-  }
-}
 .card-rotate__front, .card-rotate__back {
   display: flex;
   flex-direction: column;
@@ -635,7 +633,6 @@ a {
 @media (max-width: 600px) {
   .card-rotate__front, .card-rotate__back {
     position: relative;
-    height: auto;
     box-shadow: none;
   }
 }
@@ -645,8 +642,10 @@ a {
 }
 @media (max-width: 600px) {
   .card-rotate__back {
-    transform: none;
-    clip-path: none;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     top: 0;
     border-radius: 0;
   }
