@@ -87,6 +87,10 @@
   z-index: 1000;
 }
 
+.is-flipped {
+  transform: rotateY(-180deg);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -601,16 +605,9 @@ a {
     box-shadow: 2px 5px 10px #575353;
   }
 }
-@media (max-width: 600px) {
-  .card-rotate__inner {
-    position: absolute;
-    transition: 0.3s all;
-    transform-style: preserve-3d;
-  }
-}
 .card-rotate__name-tour {
   position: absolute;
-  top: 15rem;
+  top: 30%;
   right: 0;
   font-size: 2.5rem;
   z-index: 1000;
@@ -632,19 +629,6 @@ a {
   border-radius: 0.3rem 0 0 0.3rem;
   border-collapse: collapse;
   text-transform: uppercase;
-}
-.card-rotate:hover .card-rotate__inner {
-  transform: rotateY(-180deg);
-}
-@media (max-width: 600px) {
-  .card-rotate:hover .card-rotate__inner {
-    transform: none;
-  }
-}
-@media (max-width: 600px) {
-  .card-rotate:active .card-rotate__inner {
-    transform: rotateY(-180deg);
-  }
 }
 .card-rotate__front, .card-rotate__back {
   display: flex;
@@ -688,7 +672,7 @@ a {
   .card-rotate__booking {
     justify-content: center;
     gap: 7rem;
-    height: 50rem;
+    height: 100%;
   }
 }
 .card-rotate__title-h4 {

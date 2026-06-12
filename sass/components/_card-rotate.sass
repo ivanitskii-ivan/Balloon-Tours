@@ -21,15 +21,10 @@
         transform-style: preserve-3d
         @include screen(tab-port)
             box-shadow: 2px 5px 10px #575353
-        @include screen(phone)
-            position: absolute
-            transition: 0.3s all
-            transform-style: preserve-3d
 
     &__name-tour  // padding-card-text
-
         position: absolute
-        top: 15rem
+        top: 30%
         right: 0
         font-size: 2.5rem
         z-index: 1000
@@ -48,13 +43,10 @@
             border-collapse: collapse
             text-transform: uppercase
         
-    &:hover &__inner
-        transform: rotateY(-180deg)
-        @include screen (phone)
-            transform: none
-    &:active &__inner
-        @include screen (phone)
-            transform: rotateY(-180deg)
+    // &:hover &__inner
+    //     transform: rotateY(-180deg)
+    //     @include screen (phone)
+    //         transform: none
 
     &__front,&__back
         display: flex
@@ -89,7 +81,7 @@
         @include screen(phone)
             justify-content: center
             gap: 7rem
-            height: 50rem
+            height: 100%
 
     &__title-h4
         color: $color-white
