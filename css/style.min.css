@@ -579,7 +579,7 @@ a {
 @media (max-width: 900px) {
   .card-rotate {
     width: 100%;
-    height: 100rem;
+    height: 100dvh;
   }
 }
 @media (max-width: 600px) {
@@ -620,7 +620,7 @@ a {
 }
 @media (max-width: 900px) {
   .card-rotate__name-tour {
-    top: 47rem;
+    top: 35%;
     right: 0;
     font-size: 5rem;
   }
