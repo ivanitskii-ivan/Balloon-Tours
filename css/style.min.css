@@ -584,7 +584,7 @@ a {
 }
 @media (max-width: 600px) {
   .card-rotate {
-    height: 75dvh;
+    height: 80dvh;
   }
 }
 .card-rotate__show {
