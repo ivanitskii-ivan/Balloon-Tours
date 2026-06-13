@@ -7,18 +7,20 @@
         width: 100%
         height: 100rem
     @include  screen(phone)
-        height: 75vh
+        height: 75dvh
     &__show
         border-radius: .5rem
         height: 20rem
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
         background-blend-mode: hard-light
     &__inner
-        position: absolute
+        display: grid
         width: 100%
         height: 100%
-        transition: .3s all
+        transition: transform .5s ease 
+        will-change: transform
         transform-style: preserve-3d
+        -webkit-transform-style: preserve-3d // Префикс
         @include screen(tab-port)
             box-shadow: 2px 5px 10px #575353
 
@@ -29,6 +31,8 @@
         font-size: 2.5rem
         z-index: 1000
         text-align: end
+        transform: translateZ(2px) 
+        -webkit-backface-visibility: hidden // Префикс
         backface-visibility: hidden
         @include screen(tab-port)
             top: 47rem
@@ -42,13 +46,10 @@
             border-radius: 0.3rem 0 0 0.3rem
             border-collapse: collapse
             text-transform: uppercase
-        
-    // &:hover &__inner
-    //     transform: rotateY(-180deg)
-    //     @include screen (phone)
-    //         transform: none
+    
 
     &__front,&__back
+        grid-area: 1/1
         display: flex
         flex-direction: column
         gap: 10rem
@@ -62,6 +63,9 @@
         @include screen(phone)
             box-shadow: none
     // card-back-content
+    
+    &__front
+        transform: rotateY(0deg)
     &__back
         background: linear-gradient(90deg, $color-brown-light, $color-gray-dark)
         transform: rotateY(180deg)
