@@ -565,10 +565,6 @@ a {
 .card_scale {
   transition: 0.2s all;
 }
-.card_scale:hover {
-  transform: scale(1.1);
-  box-shadow: 0.2rem 0.4rem 0.8rem #000;
-}
 
 .card-rotate {
   perspective: 50rem;
